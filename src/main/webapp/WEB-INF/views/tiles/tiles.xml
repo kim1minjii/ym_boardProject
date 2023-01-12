@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<!-- 기본 tiles -->
+	<definition name="index"
+		template="/WEB-INF/views/template/layout.jsp">
+		<put-attribute name="title" value="NanDal!!!" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/template/header.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/template/menu.jsp" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/template/footer.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/body.jsp" />
+	</definition>
+
+	<!-- 메뉴 tiles -->
+	<definition name="recommand" extends="index">
+		<put-attribute name="title" value="추천 뷰" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/recommand/recommand.jsp" />
+	</definition>
+
+	<definition name="paldo" extends="index">
+		<put-attribute name="title" value="지도 뷰" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/paldo/paldo.jsp" />
+	</definition>
+
+	<definition name="calendar" extends="index">
+		<put-attribute name="title" value="달력 뷰" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/calendar/calendar.jsp" />
+	</definition>
+
+	<definition name="bookmark" extends="index">
+		<put-attribute name="title" value="즐겨찾기 뷰" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/bookmark/bookmark.jsp" />
+	</definition>
+
+	<!-- 내정보 tiles -->
+	<definition name="my" extends="index">
+		<put-attribute name="title" value="내정보 뷰" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/my/my.jsp" />
+	</definition>
+
+	<definition name="login" extends="index">
+		<put-attribute name="title" value="로그인 뷰" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/my/login.jsp" />
+	</definition>
+
+	<definition name="join" extends="index">
+		<put-attribute name="title" value="조인 뷰" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/my/join.jsp" />
+	</definition>
+
+	<!-- 세부정보 tiles -->
+	<definition name="detail" extends="index">
+		<put-attribute name="title" value="조인 뷰" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/detail/detail.jsp" />
+	</definition>
+</tiles-definitions>
