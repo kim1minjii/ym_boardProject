@@ -77,7 +77,7 @@
 				<c:forEach items="${aList}" var="dto">
 					<tr>
 						<td>${dto.num}</td>
-						<td><c:url var="path" value="rview.do">
+						<td><c:url var="path" value="nview.do">
 								<c:param name="currentPage" value="${pv.currentPage}" />
 								<c:param name="num" value="${dto.num}" />
 							</c:url> <c:if test="${dto.re_level>0}">

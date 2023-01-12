@@ -53,9 +53,13 @@
 			<div class="form-wrap">
 				<div class="search-wrap" style="text-align: -webkit-right;">
 					<div class="input-group mb-3 w-50">
-						<select name="type" class="form-control">
-							<option value="subject">제목</option>
-							<option value="content">내용</option>
+						<select name="searchKey" class="form-control">
+							<option value="subject"
+								<c:if test="${pv.searchKey eq 'subject'}">selected</c:if>>제목</option>
+							<option value="content"
+								<c:if test="${pv.searchKey eq 'content'}">selected</c:if>>내용</option>
+							<option value="total"
+								<c:if test="${pv.searchKey eq 'total'}">selected</c:if>>제목+내용</option>
 						</select> <input type="text" name="searchWord" class="w-75 form-control"
 							placeholder="검색어를 입력해주세요.">
 						<button class="btn btn-outline-secondary" type="submit">검색</button>

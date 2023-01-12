@@ -17,6 +17,11 @@
 		<if test='searchKey == "subject" or searchKey == "content"'>
 			WHERE ${searchKey} LIKE '%${searchWord}%'
 		</if>
+		<!-- 제목+내용 -->
+		<if test='searchKey == "total"'>
+			WHERE subject LIKE '%'||#{searchWord}||'%'
+			OR content LIKE '%'||#{searchWord}||'%'
+		</if>
 		order by ref desc, re_step asc) a)b
           <![CDATA[
       where b.rm>=#{startRow} and b.rm <=#{endRow}

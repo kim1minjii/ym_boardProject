@@ -78,7 +78,7 @@
 	<div id="bodywrap" class="container">
 
 
-		<h4>자유게시판</h4>
+		<h4>공지게시판</h4>
 
 
 		<br> <br>

@@ -13,9 +13,11 @@
       select b.* from 
       (select rownum as rm, a.* from (
          select * from noticeBoard
+         <!-- 제목 따로 내용 따로 -->
       	<if test='searchKey == "subject" or searchKey == "content"'>
 			WHERE ${searchKey} LIKE '%'||#{searchWord}||'%'
 		</if>
+		<!-- 제목+내용 -->
 		<if test='searchKey == "total"'>
 			WHERE subject LIKE '%'||#{searchWord}||'%'
 			OR content LIKE '%'||#{searchWord}||'%'
